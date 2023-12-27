@@ -1,7 +1,7 @@
-import './App.css'
+import "./App.css";
 
 function App() {
-  return <div className="bg-black w-screen h-screen flex"></div>
+  return <div className="flex h-screen w-screen bg-black"></div>;
 }
 
-export default App
+export default App;
