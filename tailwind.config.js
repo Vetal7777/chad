@@ -1,8 +1,22 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
+
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {}
+    colors: {
+      ...colors,
+      "chad-blue-0": "#32ABF2",
+      "chad-blue-30": "#96CAF7",
+      "md-dark-blue-20": "#134267",
+      "md-dark-blue-60": "#5D7FA3",
+    },
+    extend: {
+      backgroundImage: {
+        "linear-gradient":
+          "linear-gradient(339deg, #0D3251 0%, #19476C 103.05%)",
+      },
+    },
   },
-  plugins: []
-}
+  plugins: [],
+};
