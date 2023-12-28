@@ -24,6 +24,7 @@ export function OnboardingStats() {
         <Swiper
           className="max-w-[364px]"
           slidesPerView={1}
+          loop={true}
           modules={modulesArray}
           autoplay={autoplayData}
           pagination={paginationData}
