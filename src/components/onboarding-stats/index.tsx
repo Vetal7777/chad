@@ -1,3 +1,4 @@
+import uuid from "react-uuid";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { PaginationOptions } from "swiper/types/modules/pagination";
@@ -29,11 +30,11 @@ export function OnboardingStats() {
           autoplay={autoplayData}
           pagination={paginationData}
         >
-          {onboardingStats.map(({ title, description }, key) => (
+          {onboardingStats.map(({ title, description }) => (
             <>
               <SwiperSlide
-                className="max-w-stat-slide flex cursor-pointer items-center gap-4 rounded-lg bg-md-dark-blue-20 p-4 text-chad-blue-30"
-                key={key}
+                className="flex max-w-stat-slide cursor-pointer items-center gap-4 rounded-lg bg-md-dark-blue-20 p-4 text-chad-blue-30"
+                key={uuid()}
               >
                 <p
                   className="text-4xl font-bold"

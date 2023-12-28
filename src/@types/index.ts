@@ -17,6 +17,7 @@ export enum StepStatus {
 }
 
 export type StepData = {
+  id: string;
   status: StepStatusValue;
 } & StepTitle;
 
