@@ -13,7 +13,7 @@ export enum StepStatus {
   active = "active",
   completed = "completed",
   success = "success",
-  wait = "wait",
+  none = "none",
 }
 
 export type StepData = {
@@ -22,4 +22,5 @@ export type StepData = {
 
 export type StepsItemProps = {
   item: StepData;
+  renderLine?: boolean;
 };

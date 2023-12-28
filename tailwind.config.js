@@ -16,6 +16,13 @@ module.exports = {
         "linear-gradient":
           "linear-gradient(339deg, #0D3251 0%, #19476C 103.05%)",
       },
+      spacing: {
+        "stat-slide": "364px",
+        "steps-gap": "48px",
+        "2px": "2px",
+        "step-line-50%": "calc(50% - 1px)",
+        "step-line-100%": "calc(100% + 2px)",
+      },
     },
   },
   plugins: [],

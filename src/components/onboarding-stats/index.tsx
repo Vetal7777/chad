@@ -22,7 +22,7 @@ export function OnboardingStats() {
     <>
       <div className="flex flex-col gap-4 overflow-hidden">
         <Swiper
-          className="max-w-[364px]"
+          className="max-w-stat-slide"
           slidesPerView={1}
           loop={true}
           modules={modulesArray}
@@ -32,7 +32,7 @@ export function OnboardingStats() {
           {onboardingStats.map(({ title, description }, key) => (
             <>
               <SwiperSlide
-                className="flex max-w-[364px] cursor-pointer items-center gap-4 rounded-lg bg-md-dark-blue-20 p-4 text-chad-blue-30"
+                className="max-w-stat-slide flex cursor-pointer items-center gap-4 rounded-lg bg-md-dark-blue-20 p-4 text-chad-blue-30"
                 key={key}
               >
                 <p

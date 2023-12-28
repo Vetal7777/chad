@@ -17,16 +17,18 @@ export function StepsList() {
   function generateInitialSteps(array: StepTitle[]) {
     return array.map<StepData>((item) => ({
       ...item,
-      status: StepStatus.wait,
+      status: StepStatus.none,
     }));
   }
 
   return (
     <>
-      <div className="flex flex-col gap-12">
-        {steps.map((step, key) => (
-          <StepsItem item={step} key={key} />
-        ))}
+      <div className="flex flex-col gap-steps-gap">
+        {steps.map((step, key) => {
+          const renderLine = key !== steps.length - 1;
+
+          return <StepsItem item={step} key={key} renderLine={renderLine} />;
+        })}
       </div>
     </>
   );
