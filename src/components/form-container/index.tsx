@@ -3,5 +3,5 @@ export function FormContainer() {
     <>
       <div className="grow"></div>
     </>
-  );
+  )
 }

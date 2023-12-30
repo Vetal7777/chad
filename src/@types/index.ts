@@ -1,27 +1,27 @@
 export type OnboardingStat = {
-  title: string;
-  description: string;
-};
+  title: string
+  description: string
+}
 
 export type StepTitle = {
-  title: string;
-};
+  title: string
+}
 
-export type StepStatusValue = keyof typeof StepStatus;
+export type StepStatusValue = keyof typeof StepStatus
 
 export enum StepStatus {
-  active = "active",
-  completed = "completed",
-  success = "success",
-  none = "none",
+  active = 'active',
+  completed = 'completed',
+  success = 'success',
+  none = 'none'
 }
 
 export type StepData = {
-  id: string;
-  status: StepStatusValue;
-} & StepTitle;
+  id: string
+  status: StepStatusValue
+} & StepTitle
 
 export type StepsItemProps = {
-  item: StepData;
-  renderLine?: boolean;
-};
+  item: StepData
+  renderLine?: boolean
+}

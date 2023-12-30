@@ -1,27 +1,27 @@
-import { useMemo } from "react";
-import { StepStatus, type StepsItemProps } from "../../@types";
+import { useMemo } from 'react'
+import { StepStatus, type StepsItemProps } from '../../@types'
 
 export function StepsItem({ item, renderLine = false }: StepsItemProps) {
-  const { title } = item;
+  const { title } = item
 
   const lineClass = useMemo(() => {
     return renderLine
       ? "relative after:w-2px after:left-step-line-50% after:right-step-line-50% after:top-step-line-100% after:h-100% after:absolute after:h-steps-gap after:bg-md-dark-blue-60 after:content-['']"
-      : "";
-  }, [renderLine]);
+      : ''
+  }, [renderLine])
 
   const indicatorClass = useMemo(() => {
     switch (item.status) {
       default:
-        return "border-md-dark-blue-60";
+        return 'border-md-dark-blue-60'
     }
-  }, [item.status]);
+  }, [item.status])
 
   const titleClass = useMemo(
     () =>
-      item.status === StepStatus.none ? "text-md-dark-blue-60" : "text-white",
-    [item.status],
-  );
+      item.status === StepStatus.none ? 'text-md-dark-blue-60' : 'text-white',
+    [item.status]
+  )
 
   return (
     <>
@@ -32,5 +32,5 @@ export function StepsItem({ item, renderLine = false }: StepsItemProps) {
         <p className={titleClass} children={title} />
       </div>
     </>
-  );
+  )
 }

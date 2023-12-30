@@ -1,23 +1,23 @@
-import uuid from "react-uuid";
-import { Autoplay, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { PaginationOptions } from "swiper/types/modules/pagination";
-import { onboardingStats } from "../../data/content";
-import "./onboarding-stats.scss";
+import uuid from 'react-uuid'
+import { Autoplay, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { PaginationOptions } from 'swiper/types'
+import { onboardingStats } from '../../data/content'
+import './onboarding-stats.scss'
 
 export function OnboardingStats() {
-  const modulesArray = [Pagination, Autoplay];
+  const modulesArray = [Pagination, Autoplay]
   const autoplayData = {
     delay: 2500,
-    disableOnInteraction: false,
-  };
+    disableOnInteraction: false
+  }
   const paginationData: PaginationOptions = {
     clickable: true,
-    el: "#containerForBullets",
-    type: "bullets",
-    bulletClass: "swiper-custom-bullet",
-    bulletActiveClass: "swiper-custom-bullet-active",
-  };
+    el: '#containerForBullets',
+    type: 'bullets',
+    bulletClass: 'swiper-custom-bullet',
+    bulletActiveClass: 'swiper-custom-bullet-active'
+  }
 
   return (
     <>
@@ -48,5 +48,5 @@ export function OnboardingStats() {
         <div id="containerForBullets" />
       </div>
     </>
-  );
+  )
 }

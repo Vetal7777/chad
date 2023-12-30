@@ -1,5 +1,5 @@
-import { OnboardingStats } from "../onboarding-stats";
-import { StepsList } from "../steps-list";
+import { OnboardingStats } from '../onboarding-stats'
+import { StepsList } from '../steps-list'
 
 export function ProgressIndicator() {
   return (
@@ -9,5 +9,5 @@ export function ProgressIndicator() {
         <OnboardingStats />
       </div>
     </>
-  );
+  )
 }
