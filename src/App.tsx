@@ -1,6 +1,5 @@
 import "swiper/css";
 import "swiper/css/pagination";
-import "./App.css";
 import { FormContainer } from "./components/form-container";
 import { ProgressIndicator } from "./components/progress-indicator";
 
