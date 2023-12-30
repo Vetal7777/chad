@@ -1,9 +1,9 @@
+import '@/components/onboarding-stats/onboarding-stats.scss'
+import { onboardingStats } from '@/data/content'
 import uuid from 'react-uuid'
 import { Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { PaginationOptions } from 'swiper/types'
-import { onboardingStats } from '../../data/content'
-import './onboarding-stats.scss'
 
 export function OnboardingStats() {
   const modulesArray = [Pagination, Autoplay]

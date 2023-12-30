@@ -1,5 +1,5 @@
-import { OnboardingStats } from '../onboarding-stats'
-import { StepsList } from '../steps-list'
+import { OnboardingStats } from '@/components/onboarding-stats'
+import { StepsList } from '@/components/steps-list'
 
 export function ProgressIndicator() {
   return (

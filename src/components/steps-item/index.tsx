@@ -1,5 +1,5 @@
+import { StepStatus, type StepsItemProps } from '@/@types'
 import { useMemo } from 'react'
-import { StepStatus, type StepsItemProps } from '../../@types'
 
 export function StepsItem({ item, renderLine = false }: StepsItemProps) {
   const { title } = item

@@ -1,4 +1,4 @@
-import type { OnboardingStat, StepTitle } from '../@types'
+import type { OnboardingStat, StepTitle } from '@/@types'
 
 export const onboardingStats: OnboardingStat[] = [
   {
