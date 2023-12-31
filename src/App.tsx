@@ -1,15 +1,14 @@
-import { FormContainer } from '@/components/form-container'
-import { ProgressIndicator } from '@/components/progress-indicator'
+import { Route, Routes } from 'react-router-dom'
 import 'swiper/css'
 import 'swiper/css/pagination'
+import { Auth } from './pages/auth'
 
 function App() {
   return (
     <>
-      <div className="flex h-screen w-screen">
-        <ProgressIndicator />
-        <FormContainer />
-      </div>
+      <Routes>
+        <Route path="/auth" element={<Auth />} />
+      </Routes>
     </>
   )
 }
