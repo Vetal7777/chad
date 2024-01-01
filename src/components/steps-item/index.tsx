@@ -1,7 +1,7 @@
 import type { StepsItemProps } from '@/@types'
 import './steps-item.scss'
 
-export function StepsItem({ item, renderLine = false }: StepsItemProps) {
+export function StepsItem({ item, renderLine }: StepsItemProps) {
   const { title } = item
 
   const withoutLineClass = renderLine ? '' : 'line-hidden'
