@@ -17,7 +17,7 @@ module.exports = {
         4.25: '17px'
       },
       backgroundImage: {
-        'linear-gradient':
+        'progress-indicator-gradient':
           'linear-gradient(339deg, #0D3251 0%, #19476C 103.05%)',
         'auth-container': "url('/form-background.webp')"
       },
