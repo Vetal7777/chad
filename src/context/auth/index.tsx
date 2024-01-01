@@ -1,8 +1,8 @@
 import {
-  AuthContextValue,
-  AuthProviderProps,
-  StepData,
-  StepStatus
+  StepStatus,
+  type AuthContextValue,
+  type AuthProviderProps,
+  type StepData
 } from '@/@types'
 import { authReducer, initialState } from '@/context/auth/reducer'
 import { createContext, useReducer } from 'react'

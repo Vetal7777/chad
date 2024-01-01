@@ -1,9 +1,9 @@
 import {
-  AuthReducerAction,
-  AuthReducerState,
-  StepData,
   StepStatus,
-  StepTitle
+  type AuthReducerAction,
+  type AuthReducerState,
+  type StepData,
+  type StepTitle
 } from '@/@types'
 import { steps } from '@/data/content'
 import uuid from 'react-uuid'
