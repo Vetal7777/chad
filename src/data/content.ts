@@ -42,3 +42,13 @@ export const steps: StepTitle[] = [
     title: 'Done'
   }
 ]
+
+export const applicationName = 'Chad'
+
+export const authForm = {
+  welcome: {
+    title: 'Welcome to Chad',
+    description:
+      'Go live in 10 minutes! Our self-service widget empowers your customers to manage orders and track shipments 24/7 without driving you crazy.'
+  }
+}

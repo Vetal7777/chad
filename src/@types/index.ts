@@ -47,3 +47,15 @@ export type AuthContextValue = {
   setCompletedStatus: (id: string) => void
   setSuccessStatus: (id: string) => void
 }
+
+export type BaseInputProps = {
+  label?: string
+  placeholder?: string
+  value?: string
+  password?: true
+}
+
+export type PasswordVisibilityButtonProps = {
+  onClick: () => void
+  value: boolean
+}
