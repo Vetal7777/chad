@@ -25,3 +25,25 @@ export type StepsItemProps = {
   item: StepData
   renderLine?: boolean
 }
+
+export type AuthReducerState = StepData[]
+
+export type AuthProviderProps = {
+  children: JSX.Element
+}
+
+export type AuthReducerAction = {
+  type: AuthReducerActionType
+  payload: AuthReducerActionPayload
+}
+
+export type AuthReducerActionType = 'UPDATE_AUTH_STEPS'
+
+export type AuthReducerActionPayload = StepData
+
+export type AuthContextValue = {
+  steps: StepData[]
+  setActiveStatus: (id: string) => void
+  setCompletedStatus: (id: string) => void
+  setSuccessStatus: (id: string) => void
+}

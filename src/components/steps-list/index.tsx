@@ -1,27 +1,10 @@
-import { StepStatus, type StepData, type StepTitle } from '@/@types'
-import { StepsItem } from '@/components/steps-item'
-import { steps as stepsData } from '@/data/content'
-import { useEffect, useState } from 'react'
+import { AuthContext } from '@/context/auth/context'
+import { useContext } from 'react'
 import uuid from 'react-uuid'
+import { StepsItem } from '../steps-item'
 
 export function StepsList() {
-  //TODO: toggle useState to useReducer
-  const [steps, setSteps] = useState(generateInitialSteps(stepsData))
-
-  useEffect(
-    () => {},
-    [
-      //TODO: set first step is active
-    ]
-  )
-
-  function generateInitialSteps(array: StepTitle[]) {
-    return array.map<StepData>((item) => ({
-      ...item,
-      id: uuid(),
-      status: StepStatus.none
-    }))
-  }
+  const { steps } = useContext(AuthContext)
 
   return (
     <>
