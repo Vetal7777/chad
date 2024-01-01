@@ -1,17 +1,11 @@
 #containerForBullets {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
+  @apply flex justify-center gap-3;
 }
 
 .swiper-custom-bullet {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #134267;
-  cursor: pointer;
+  @apply h-2 w-2 cursor-pointer rounded-full bg-md-dark-blue-20;
 }
 
 .swiper-custom-bullet-active {
-  background-color: #96caf7;
+  @apply bg-chad-blue-30;
 }

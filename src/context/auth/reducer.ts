@@ -1,5 +1,6 @@
 import {
   AuthReducerActionCase,
+  StepKey,
   StepStatus,
   type AuthReducerAction,
   type AuthReducerState,
@@ -17,7 +18,10 @@ function generateInitialSteps(array: StepTitle[]) {
   }))
 }
 
-export const initialState = generateInitialSteps(steps)
+export const initialState = {
+  steps: generateInitialSteps(steps),
+  currentStep: StepKey.welcome
+}
 
 export const authReducer = (
   state: AuthReducerState,
@@ -27,7 +31,14 @@ export const authReducer = (
 
   switch (type) {
     case AuthReducerActionCase.updateStep:
-      return [...state].map((item) => (item.id === payload.id ? payload : item))
+      const updatedSteps = [...state.steps].map((item) =>
+        item.id === payload.id ? payload : item
+      )
+
+      return {
+        ...state,
+        steps: updatedSteps
+      }
 
     default:
       throw new Error(`No case for type ${type} found in shopReducer.`)

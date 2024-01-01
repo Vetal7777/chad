@@ -1,3 +1,4 @@
+import { StepKey } from '@/@types'
 import { FormContainer } from '@/components/form-container'
 import { ProgressIndicator } from '@/components/progress-indicator'
 import { AuthContext } from '@/context/auth'
@@ -7,7 +8,12 @@ export function Auth() {
   const { steps, setActiveStatus } = useContext(AuthContext)
 
   useEffect(() => {
-    const currentStepId = steps[0].id
+    const currentStep = steps.find(({ key }) => key === StepKey.welcome)
+
+    if (!currentStep)
+      throw new Error('Cannot find current step in Auth onMounted hook')
+
+    const currentStepId = currentStep.id
     setActiveStatus(currentStepId)
   }, [])
 

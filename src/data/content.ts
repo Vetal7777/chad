@@ -1,4 +1,4 @@
-import type { OnboardingStat, StepTitle } from '@/@types'
+import { StepKey, type OnboardingStat, type StepTitle } from '@/@types'
 
 export const onboardingStats: OnboardingStat[] = [
   {
@@ -30,15 +30,19 @@ export const onboardingStats: OnboardingStat[] = [
 
 export const steps: StepTitle[] = [
   {
-    title: 'Welcome'
+    title: 'Welcome',
+    key: StepKey.welcome
   },
   {
+    key: StepKey.shopifyConnection,
     title: 'Connect your Shopify store'
   },
   {
+    key: StepKey.supportEmailConnection,
     title: 'Connect your customer support email'
   },
   {
+    key: StepKey.success,
     title: 'Done'
   }
 ]

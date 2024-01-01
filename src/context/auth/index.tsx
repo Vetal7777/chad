@@ -9,7 +9,7 @@ import { authReducer, initialState } from '@/context/auth/reducer'
 import { createContext, useReducer } from 'react'
 
 export const AuthContext = createContext<AuthContextValue>({
-  steps: initialState,
+  ...initialState,
   setActiveStatus: () => null,
   setCompletedStatus: () => null,
   setSuccessStatus: () => null
@@ -31,7 +31,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   }
 
   function updateStepStatus(id: string, status: StepStatus) {
-    const updatedStep = state.find(({ id: stepId }) => stepId === id)
+    const updatedStep = state.steps.find(({ id: stepId }) => stepId === id)
 
     if (!updatedStep) {
       throw new Error(`No case for current step in updateStepStatus.`)
@@ -48,7 +48,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   }
 
   const value: AuthContextValue = {
-    steps: state,
+    ...state,
     setActiveStatus,
     setCompletedStatus,
     setSuccessStatus

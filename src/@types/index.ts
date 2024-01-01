@@ -5,6 +5,16 @@ export type OnboardingStat = {
 
 export type StepTitle = {
   title: string
+  key: StepKeyValue
+}
+
+export type StepKeyValue = keyof typeof StepKey
+
+export enum StepKey {
+  welcome = 'welcome',
+  shopifyConnection = 'shopifyConnection',
+  supportEmailConnection = 'supportEmailConnection',
+  success = 'success'
 }
 
 export type StepStatusValue = keyof typeof StepStatus
@@ -26,7 +36,10 @@ export type StepsItemProps = {
   renderLine?: boolean
 }
 
-export type AuthReducerState = StepData[]
+export type AuthReducerState = {
+  steps: StepData[]
+  currentStep: StepKeyValue
+}
 
 export type AuthProviderProps = {
   children: JSX.Element
@@ -47,6 +60,7 @@ export type AuthReducerActionPayload = StepData
 
 export type AuthContextValue = {
   steps: StepData[]
+  currentStep: StepKeyValue
   setActiveStatus: (id: string) => void
   setCompletedStatus: (id: string) => void
   setSuccessStatus: (id: string) => void
@@ -67,4 +81,8 @@ export type PasswordVisibilityButtonProps = {
 export type BaseButtonProps = {
   title: string
   onClick: () => void
+}
+
+export type BaseFormProps = {
+  children?: JSX.Element | false
 }

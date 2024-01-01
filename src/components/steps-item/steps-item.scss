@@ -1,3 +1,12 @@
-.line-hidden::after {
-  display: none;
+.line {
+  @apply after:absolute after:left-step-line-50% after:right-step-line-50% after:top-step-line-100% after:h-steps-gap after:w-2px after:bg-md-dark-blue-60  after:content-[''];
+}
+
+.active {
+  .title {
+    @apply text-white;
+  }
+  .point {
+    @apply border-chad-blue-0;
+  }
 }
