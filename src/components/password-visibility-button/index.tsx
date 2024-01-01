@@ -1,4 +1,4 @@
-import { PasswordVisibilityButtonProps } from '@/@types'
+import type { PasswordVisibilityButtonProps } from '@/@types'
 import { FiEye, FiEyeOff } from 'react-icons/fi'
 
 export function PasswordVisibilityButton({

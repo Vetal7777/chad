@@ -1,6 +1,6 @@
-import { BaseInputProps } from '@/@types'
+import type { BaseInputProps } from '@/@types'
+import { PasswordVisibilityButton } from '@/components/password-visibility-button'
 import { useEffect, useMemo, useState } from 'react'
-import { PasswordVisibilityButton } from '../password-visibility-button'
 
 const INPUT_TYPES = {
   password: 'password',
