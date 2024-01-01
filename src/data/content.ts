@@ -3,56 +3,45 @@ import { StepKey, type OnboardingStat, type StepTitle } from '@/@types'
 export const onboardingStats: OnboardingStat[] = [
   {
     title: '5x',
-    description:
-      'Acquiring a new customer is 5x more costly than making an unhappy customer happy'
+    description: 'auth.onboarding_stats.description'
   },
   {
     title: '5x',
-    description:
-      'Acquiring a new customer is 5x more costly than making an unhappy customer happy'
+    description: 'auth.onboarding_stats.description'
   },
   {
     title: '5x',
-    description:
-      'Acquiring a new customer is 5x more costly than making an unhappy customer happy'
+    description: 'auth.onboarding_stats.description'
   },
   {
     title: '5x',
-    description:
-      'Acquiring a new customer is 5x more costly than making an unhappy customer happy'
+    description: 'auth.onboarding_stats.description'
   },
   {
     title: '5x',
-    description:
-      'Acquiring a new customer is 5x more costly than making an unhappy customer happy'
+    description: 'auth.onboarding_stats.description'
   }
 ]
 
 export const steps: StepTitle[] = [
   {
-    title: 'Welcome',
+    title: 'auth.steps.title.welcome',
     key: StepKey.welcome
   },
   {
-    key: StepKey.shopifyConnection,
-    title: 'Connect your Shopify store'
+    title: 'auth.steps.title.shopify_connection',
+    key: StepKey.shopifyConnection
   },
   {
-    key: StepKey.supportEmailConnection,
-    title: 'Connect your customer support email'
+    title: 'auth.steps.title.support_email_connection',
+    key: StepKey.supportEmailConnection
   },
   {
-    key: StepKey.success,
-    title: 'Done'
+    title: 'auth.steps.title.done',
+    key: StepKey.success
   }
 ]
 
 export const applicationName = 'Chad'
 
-export const authForm = {
-  welcome: {
-    title: 'Welcome to Chad',
-    description:
-      'Go live in 10 minutes! Our self-service widget empowers your customers to manage orders and track shipments 24/7 without driving you crazy.'
-  }
-}
+export const authForm = {}

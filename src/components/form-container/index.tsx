@@ -4,11 +4,14 @@ import { BaseForm } from '@/components/base-form'
 import { BaseInput } from '@/components/base-input'
 import { Logo } from '@/components/logo'
 import { AuthContext } from '@/context/auth'
-import { applicationName, authForm } from '@/data/content'
+import { applicationName } from '@/data/content'
 import { useContext, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export function FormContainer() {
+  const { t } = useTranslation()
   const { currentStep } = useContext(AuthContext)
+
   const welcomeStep = useMemo(
     () => currentStep === StepKey.welcome,
     [currentStep]
@@ -29,31 +32,42 @@ export function FormContainer() {
                 <div className="flex flex-col gap-4">
                   <p
                     className="text-2xl font-semibold text-md-dark-blue-20"
-                    children={authForm.welcome.title}
+                    children={t('auth.form.welcome.title')}
                   />
                   <p
                     className="text-sm font-light text-md-shade-40"
-                    children={authForm.welcome.description}
+                    children={t('auth.form.welcome.description')}
                   />
                 </div>
               </div>
               <div className="flex flex-col gap-6">
-                <BaseInput label="Email" placeholder="megachad@trychad.com" />
-                <BaseInput label="Your name" placeholder="Mega Chad" />
+                <BaseInput
+                  label={t('auth.form.welcome.input.email.label')}
+                  placeholder={t('auth.form.welcome.input.email.placeholder')}
+                />
+                <BaseInput
+                  label={t('auth.form.welcome.input.name.label')}
+                  placeholder={t('auth.form.welcome.input.name.placeholder')}
+                />
                 <BaseInput
                   password
-                  label="Password"
-                  placeholder="Enter password"
+                  label={t('auth.form.welcome.input.password.label')}
+                  placeholder={t(
+                    'auth.form.welcome.input.password.placeholder'
+                  )}
                 />
               </div>
               <div className="flex flex-col items-center gap-4">
                 <BaseButton
-                  title="Create account"
+                  title={t('auth.form.welcome.submit_button.title')}
                   onClick={() => console.log('click')}
                 />
                 <div className="flex items-center justify-center gap-0.5 text-xs font-light">
-                  <p children="Already have an account?" />
-                  <button className="text-chad-blue-0" children="Login" />
+                  <p children={t('auth.form.welcome.footer.message')} />
+                  <button
+                    className="text-chad-blue-0"
+                    children={t('auth.form.welcome.footer.button')}
+                  />
                 </div>
               </div>
             </div>

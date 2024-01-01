@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import { AuthProvider } from './context/auth'
+import './i18n/config'
 import { Auth } from './pages/auth'
 
 function App() {

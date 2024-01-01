@@ -1,11 +1,14 @@
 import '@/components/onboarding-stats/onboarding-stats.scss'
 import { onboardingStats } from '@/data/content'
+import { useTranslation } from 'react-i18next'
 import uuid from 'react-uuid'
 import { Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import type { PaginationOptions } from 'swiper/types'
 
 export function OnboardingStats() {
+  const { t } = useTranslation()
+
   const modulesArray = [Pagination, Autoplay]
   const autoplayData = {
     delay: 2500,
@@ -40,7 +43,7 @@ export function OnboardingStats() {
                   className="text-4xl font-bold"
                   children={title.toUpperCase()}
                 />
-                <p className="text-sm font-light" children={description} />
+                <p className="text-sm font-light" children={t(description)} />
               </SwiperSlide>
             </>
           ))}
