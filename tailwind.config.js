@@ -14,7 +14,8 @@ module.exports = {
         'md-shade-100': '#F8F9FC'
       },
       padding: {
-        4.25: '17px'
+        4.25: '17px',
+        2.75: '11px'
       },
       backgroundImage: {
         'progress-indicator-gradient':

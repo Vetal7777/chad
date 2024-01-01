@@ -1,4 +1,5 @@
 import {
+  AuthReducerActionCase,
   StepStatus,
   type AuthContextValue,
   type AuthProviderProps,
@@ -41,7 +42,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   function updateStep(step: StepData) {
     dispatch({
-      type: 'UPDATE_AUTH_STEPS',
+      type: AuthReducerActionCase.updateStep,
       payload: step
     })
   }

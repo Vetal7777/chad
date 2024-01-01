@@ -37,7 +37,11 @@ export type AuthReducerAction = {
   payload: AuthReducerActionPayload
 }
 
-export type AuthReducerActionType = 'UPDATE_AUTH_STEPS'
+export enum AuthReducerActionCase {
+  updateStep = 'UPDATE_AUTH_STEP'
+}
+
+export type AuthReducerActionType = AuthReducerActionCase.updateStep
 
 export type AuthReducerActionPayload = StepData
 
@@ -58,4 +62,9 @@ export type BaseInputProps = {
 export type PasswordVisibilityButtonProps = {
   onClick: () => void
   value: boolean
+}
+
+export type BaseButtonProps = {
+  title: string
+  onClick: () => void
 }

@@ -1,4 +1,5 @@
 import {
+  AuthReducerActionCase,
   StepStatus,
   type AuthReducerAction,
   type AuthReducerState,
@@ -25,7 +26,7 @@ export const authReducer = (
   const { type, payload } = action
 
   switch (type) {
-    case 'UPDATE_AUTH_STEPS':
+    case AuthReducerActionCase.updateStep:
       return [...state].map((item) => (item.id === payload.id ? payload : item))
 
     default:

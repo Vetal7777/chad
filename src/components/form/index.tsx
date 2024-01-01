@@ -1,7 +1,8 @@
+import { BaseButton } from '@/components/base-button'
+import { BaseInput } from '@/components/base-input'
 import { Logo } from '@/components/logo'
 import { applicationName, authForm } from '@/data/content'
 import { FormEvent } from 'react'
-import { BaseInput } from '../base-input'
 
 export function Form() {
   function onSubmit(event: FormEvent) {
@@ -11,7 +12,7 @@ export function Form() {
   return (
     <>
       <form
-        className="shadow-auth-form max-w-120 flex flex-col gap-8 rounded-lg bg-white px-10 py-16"
+        className="flex max-w-120 flex-col gap-8 rounded-lg bg-white px-10 py-16 shadow-auth-form"
         onSubmit={onSubmit}
       >
         <div className="flex flex-col gap-6 ">
@@ -25,7 +26,7 @@ export function Form() {
               children={authForm.welcome.title}
             />
             <p
-              className="text-md-shade-40 text-sm font-light"
+              className="text-sm font-light text-md-shade-40"
               children={authForm.welcome.description}
             />
           </div>
@@ -34,6 +35,16 @@ export function Form() {
           <BaseInput label="Email" placeholder="megachad@trychad.com" />
           <BaseInput label="Your name" placeholder="Mega Chad" />
           <BaseInput password label="Password" placeholder="Enter password" />
+        </div>
+        <div className="flex flex-col items-center gap-4">
+          <BaseButton
+            title="Create account"
+            onClick={() => console.log('click')}
+          />
+          <div className="flex items-center justify-center gap-0.5 text-xs font-light">
+            <p children="Already have an account?" />
+            <button className="text-chad-blue-0" children="Login" />
+          </div>
         </div>
       </form>
     </>
