@@ -1,4 +1,4 @@
-import { AuthContext } from '@/context/auth/context'
+import { AuthContext } from '@/context/auth'
 import { useContext } from 'react'
 import uuid from 'react-uuid'
 import { StepsItem } from '../steps-item'

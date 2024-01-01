@@ -1,6 +1,6 @@
 import { FormContainer } from '@/components/form-container'
 import { ProgressIndicator } from '@/components/progress-indicator'
-import { AuthProvider } from '@/context/auth/context'
+import { AuthProvider } from '@/context/auth'
 
 export function Auth() {
   return (
