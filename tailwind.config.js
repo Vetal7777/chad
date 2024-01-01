@@ -1,20 +1,18 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors')
 
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    colors: {
-      ...colors,
-      'chad-blue-0': '#32ABF2',
-      'chad-blue-30': '#96CAF7',
-      'md-dark-blue-20': '#134267',
-      'md-dark-blue-60': '#5D7FA3',
-      'md-shade-40': '#4F637D',
-      'md-shade-80': '#C3CAD5',
-      'md-shade-100': '#F8F9FC'
-    },
     extend: {
+      colors: {
+        'chad-blue-0': '#32ABF2',
+        'chad-blue-30': '#96CAF7',
+        'md-dark-blue-20': '#134267',
+        'md-dark-blue-60': '#5D7FA3',
+        'md-shade-40': '#4F637D',
+        'md-shade-80': '#C3CAD5',
+        'md-shade-100': '#F8F9FC'
+      },
       padding: {
         4.25: '17px'
       },
