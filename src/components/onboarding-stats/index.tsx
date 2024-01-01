@@ -3,7 +3,7 @@ import { onboardingStats } from '@/data/content'
 import uuid from 'react-uuid'
 import { Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { PaginationOptions } from 'swiper/types'
+import type { PaginationOptions } from 'swiper/types'
 
 export function OnboardingStats() {
   const modulesArray = [Pagination, Autoplay]
