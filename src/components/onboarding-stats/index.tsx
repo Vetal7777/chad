@@ -43,11 +43,13 @@ export function OnboardingStats() {
                   className="text-4xl font-bold"
                   children={title.toUpperCase()}
                 />
+
                 <p className="text-sm font-light" children={t(description)} />
               </SwiperSlide>
             </>
           ))}
         </Swiper>
+
         <div id="containerForBullets" />
       </div>
     </>

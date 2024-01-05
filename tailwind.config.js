@@ -15,7 +15,8 @@ module.exports = {
       },
       padding: {
         4.25: '17px',
-        2.75: '11px'
+        2.75: '11px',
+        0.75: '3px'
       },
       backgroundImage: {
         'progress-indicator-gradient':
@@ -25,9 +26,13 @@ module.exports = {
       spacing: {
         'stat-slide': '364px',
         'steps-gap': '48px',
+        'step-gap-active': '34px',
         '2px': '2px',
         'step-line-50%': 'calc(50% - 1px)',
         'step-line-100%': 'calc(100% + 2px)'
+      },
+      borderWidth: {
+        1.5: '1.5px'
       },
       boxShadow: {
         'auth-form': '0px 5px 20px 0px rgba(108, 117, 139, 0.20)'
@@ -37,6 +42,9 @@ module.exports = {
       },
       maxWidth: {
         120: '480px'
+      },
+      scale: {
+        131.25: '131.25%'
       }
     }
   },

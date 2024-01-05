@@ -29,6 +29,7 @@ export type BaseInputProps = {
   placeholder?: string
   value?: string
   password?: true
+  onChange: (value: string) => void
 }
 
 export type PasswordVisibilityButtonProps = {
@@ -86,4 +87,10 @@ export type AuthContextValue = {
   setActiveStatus: (id: string) => void
   setCompletedStatus: (id: string) => void
   setSuccessStatus: (id: string) => void
+}
+
+export type WelcomeFormData = {
+  email: string
+  name: string
+  password: string
 }

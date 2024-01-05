@@ -43,5 +43,3 @@ export const steps: StepTitle[] = [
 ]
 
 export const applicationName = 'Chad'
-
-export const authForm = {}

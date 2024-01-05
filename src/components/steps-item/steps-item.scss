@@ -10,3 +10,14 @@
     @apply border-chad-blue-0;
   }
 }
+.success {
+  .title {
+    @apply text-white;
+  }
+  .point {
+    @apply scale-131.25 border-1.5 border-chad-blue-0;
+  }
+  .line {
+    @apply after:h-step-gap-active;
+  }
+}

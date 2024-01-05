@@ -11,7 +11,8 @@ export function BaseInput({
   label,
   placeholder,
   value,
-  password
+  password,
+  onChange
 }: BaseInputProps) {
   const initialType = getInitalType()
   const [currentType, setCurrentType] = useState(initialType)
@@ -43,15 +44,17 @@ export function BaseInput({
     <>
       <div className="flex flex-col gap-2">
         {label && (
-          <label className="text-md-shade-40 text-xs" children={label} />
+          <label className="text-xs text-md-shade-40" children={label} />
         )}
         <div className="relative">
           <input
             type={currentType}
-            className="placeholder:text-md-shade-80 px-4.25 bg-md-shade-100 w-full rounded py-2.5 outline-none placeholder:text-base"
+            className="w-full rounded bg-md-shade-100 px-4.25 py-2.5 outline-none placeholder:text-base placeholder:text-md-shade-80"
             value={value}
             placeholder={placeholder}
+            onChange={({ target }) => onChange(target.value)}
           />
+
           {password && (
             <PasswordVisibilityButton
               value={showPassword}
