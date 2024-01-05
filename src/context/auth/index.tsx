@@ -2,7 +2,7 @@ import {
   AuthReducerActionCase,
   StepStatus,
   type AuthContextValue,
-  type AuthProviderProps,
+  type JSXELementChildren,
   type StepData
 } from '@/@types'
 import { authReducer, initialState } from '@/context/auth/reducer'
@@ -15,7 +15,7 @@ export const AuthContext = createContext<AuthContextValue>({
   setSuccessStatus: () => null
 })
 
-export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
+export const AuthProvider: React.FC<JSXELementChildren> = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, initialState)
 
   function setActiveStatus(id: string) {

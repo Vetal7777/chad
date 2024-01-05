@@ -19,7 +19,7 @@ export function Auth() {
 
   return (
     <>
-      <div className="flex h-screen w-screen">
+      <div className="flex w-full">
         <ProgressIndicator />
         <FormContainer />
       </div>

@@ -46,7 +46,7 @@ export type BaseFormProps = {
   children?: JSX.Element | false
 }
 
-export type AuthProviderProps = {
+export type JSXELementChildren = {
   children: JSX.Element
 }
 
