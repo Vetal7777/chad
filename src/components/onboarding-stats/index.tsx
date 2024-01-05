@@ -34,19 +34,17 @@ export function OnboardingStats() {
           pagination={paginationData}
         >
           {onboardingStats.map(({ title, description }) => (
-            <>
-              <SwiperSlide
-                className="flex max-w-stat-slide cursor-pointer items-center gap-4 rounded-lg bg-md-dark-blue-20 p-4 text-chad-blue-30"
-                key={uuid()}
-              >
-                <p
-                  className="text-4xl font-bold"
-                  children={title.toUpperCase()}
-                />
+            <SwiperSlide
+              className="flex max-w-stat-slide cursor-pointer items-center gap-4 rounded-lg bg-md-dark-blue-20 p-4 text-chad-blue-30"
+              key={uuid()}
+            >
+              <p
+                className="text-4xl font-bold"
+                children={title.toUpperCase()}
+              />
 
-                <p className="text-sm font-light" children={t(description)} />
-              </SwiperSlide>
-            </>
+              <p className="text-sm font-light" children={t(description)} />
+            </SwiperSlide>
           ))}
         </Swiper>
 
